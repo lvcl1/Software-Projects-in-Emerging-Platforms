@@ -1,10 +1,10 @@
 var constraints = { video: { facingMode: "user" }, audio: false };
 var track = null;
 
-const cameraView = document.getElementById("camera--view"),
-    cameraOutput = document.getElementById("camera--output"),
-    cameraSensor = document.getElementById("camera--sensor"),
-    cameraTrigger = document.getElementById("camera--trigger")
+const cameraView = document.getElementById("CameraView"),
+    cameraOutput = document.getElementById("CameraOutput"),
+    cameraSensor = document.getElementById("CameraSensor"),
+    cameraTrigger = document.getElementById("CameraTrigger")
 
 function cameraStart() {
     navigator.mediaDevices

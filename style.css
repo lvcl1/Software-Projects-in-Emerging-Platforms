@@ -1,20 +1,20 @@
 html, body{
     margin: 0;
     padding: 0;
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
   }
-  #camera, #camera--view, #camera--sensor, #camera--output{
+  #camera, #CameraView, #CameraSensor, #CameraOutput{
       position: fixed;
       height: 100%;
       width: 100%;
       object-fit: cover;
   }
-  #camera--view, #camera--sensor, #camera--output{
+  #CameraView, #CameraSensor, #CameraOutput{
       transform: scaleX(-1);
       filter: FlipH;
   }
-  #camera--trigger{
+  #CameraTrigger{
       width: 200px;
       background-color: black;
       color: white;
