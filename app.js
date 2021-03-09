@@ -3,7 +3,8 @@ var track = null;
 
 const cameraView = document.getElementById("CameraView"),
     cameraSensor = document.getElementById("CameraSensor"),
-    cameraTrigger = document.getElementById("CameraTrigger")
+    cameraTrigger = document.getElementById("CameraTrigger"),
+    input = document.getElementById("input")
 
 function cameraStart() {
     navigator.mediaDevices
@@ -19,7 +20,11 @@ function cameraStart() {
 cameraTrigger.onclick = function() {
     cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
-    cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+    var canvas=cameraSensor.getContext("2d");
+    canvas.drawImage(cameraView, 0, 0);
+    canvas.fillStyle="White";
+    canvas.font="18px Arial";
+    canvas.fillText(input.value,(cameraSensor.width/2)-100,cameraSensor.height-20)
 };
 
 window.addEventListener("load", cameraStart, false);
